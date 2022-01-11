@@ -28,6 +28,8 @@ COMMIT;
 
 -- Verify that change was made and persists after commit.
 
+SELECT * FROM animals;
+
 --  id |    name    | date_of_birth | escape_attempts | neutered | weight_kg | species
 -- ----+------------+---------------+-----------------+----------+-----------+---------
 --   1 | Agumon     | 2020-02-03    |               0 | t        |     10.23 | digimon
@@ -48,6 +50,8 @@ DELETE FROM animals;
 ROLLBACK;
 
 --After the roll back verify if all records in the animals table still exist.
+
+SELECT * FROM animals;
 
 --  id |    name    | date_of_birth | escape_attempts | neutered | weight_kg | species
 -- ----+------------+---------------+-----------------+----------+-----------+---------
@@ -85,6 +89,8 @@ UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 COMMIT;
 
 -- Verify that change was made and persists after commit.
+
+SELECT * FROM animals;
 
 -- id |    name    | date_of_birth | escape_attempts | neutered | weight_kg | species
 -- ----+------------+---------------+-----------------+----------+-----------+---------
