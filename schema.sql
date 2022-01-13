@@ -37,3 +37,13 @@ ADD COLUMN owner_id INT;
 
 ALTER TABLE animals
 ADD FOREIGN KEY (species_id) REFERENCES species(id);
+
+
+-- DAY 4
+
+CREATE TABLE vets(
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100),
+    age INT,
+    date_of_graduation DATE
+);
