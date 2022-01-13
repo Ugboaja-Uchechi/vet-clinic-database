@@ -29,6 +29,12 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '201
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-05-04');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harness', 64, '2008-06-08');
 
+-- Insert the following data for specialization:
+
+VALUES ((SELECT id FROM vets WHERE name='William Tatcher'), (SELECT id FROM species WHERE name='Pokemon'));
+VALUES ((SELECT id FROM vets WHERE name= 'Stephanie Mendez'), (SELECT id FROM species WHERE name='Digimon'));
+VALUES ((SELECT id FROM vets WHERE name= 'Stephanie Mendez'), (SELECT id FROM species WHERE name='Pokemon'));
+VALUES ((SELECT id FROM vets WHERE name='Jack Harness'), (SELECT id FROM species WHERE name='Digimon'));
 
 UPDATE animals set species_id= (SELECT ID FROM species WHERE name='Digimon')
 WHERE name like '%mon';
