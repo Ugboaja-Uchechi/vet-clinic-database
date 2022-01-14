@@ -47,3 +47,32 @@ CREATE TABLE vets(
     age INT,
     date_of_graduation DATE
 );
+
+CREATE TABLE specializations(
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    species_id INT,
+    vets_id INT,
+
+    CONSTRAINT fk_vets_id
+        FOREIGN KEY(vets_id)
+            REFERENCES vets(id),
+
+    CONSTRAINT fk_species_id
+        FOREIGN KEY(species_id)
+            REFERENCES species(id)
+);
+
+CREATE TABLE visits(
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    animals_id INT,
+    vets_id INT,
+    date_of_visits DATE,
+
+    CONSTRAINT fk_vets_id
+        FOREIGN KEY(vets_id)
+            REFERENCES vets(id),
+
+    CONSTRAINT fk_animals_id
+        FOREIGN KEY(animals_id)
+            REFERENCES animals(id)
+);
