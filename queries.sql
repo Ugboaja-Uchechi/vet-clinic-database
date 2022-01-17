@@ -9,11 +9,11 @@ SELECT * FROM animals WHERE neutered='true';
 SELECT * FROM animals WHERE name != 'Gabumon';
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
-SELECT name FROM animals WHERE date_of_birth BETWEEN '2022-12-31' AND '1993-01-01';
+-- SELECT name FROM animals WHERE date_of_birth BETWEEN '2022-12-31' AND '1993-01-01';
 
 -- Inside a transaction update the animals table by setting the species column to unspecified. Verify that change was made. Then roll back the change and verify that species columns went back to the state before tranasction.
 BEGIN;
-UPDATE animals SET species = 'unspecified'
+UPDATE animals SET species = 'unspecified';
 ROLLBACK;
 
 -- Inside a transaction:
