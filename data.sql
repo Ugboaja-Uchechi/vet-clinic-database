@@ -27,13 +27,13 @@ INSERT INTO species (name) VALUES ('Digimon');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2020-04-23');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '2019-01-17');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-05-04');
-INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harness', 64, '2008-06-08');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harness', 38, '2008-06-08');
 
 -- Insert the following data for specialization:
 
 INSERT INTO specializations (species_id, vets_id) VALUES ((SELECT id FROM vets WHERE name='William Tatcher'), (SELECT id FROM species WHERE name='Pokemon'));
 INSERT INTO specializations (vets_id, species_id) VALUES ((SELECT id FROM vets WHERE name='Stephanie Mendez'), (SELECT id FROM species WHERE name='Digimon'));
-INSERT INTO specializations (species_id, vets_id) VALUES ((SELECT id FROM vets WHERE name='Stephanie Mendez'), (SELECT id FROM species WHERE name='Pokemon'));
+INSERT INTO specializations (vets_id, species_id) VALUES ((SELECT id FROM vets WHERE name='Stephanie Mendez'), (SELECT id FROM species WHERE name='Pokemon'));
 INSERT INTO specializations (species_id, vets_id) VALUES ((SELECT id FROM vets WHERE name='Jack Harkness'), (SELECT id FROM species WHERE name='Digimon'));
 
 -- Insert the following data for visits:

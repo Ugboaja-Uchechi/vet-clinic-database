@@ -1,6 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
-CREATE TABLE animals (
+CREATE TABLE animals(
     id INT,
     name VARCHAR(100),
     date_of_birth DATE,
@@ -24,7 +24,7 @@ CREATE TABLE species(
 );
 
 ALTER TABLE animals
-ADD PRIMARY KEY (id)
+ADD PRIMARY KEY (id);
 
 ALTER TABLE animals
 DROP COLUMN species;
