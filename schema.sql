@@ -81,14 +81,18 @@ CREATE TABLE visits(
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 -- Check running time
+
 explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
 
--- explain analyze SELECT * FROM visits where vets_id = 2;
+CREATE INDEX idx_animals_id ON visits(animal_id);
 
--- explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+explain analyze SELECT * FROM visits where vets_id = 2;
+
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
 
 -- -- improve execution time;
 
--- CREATE INDEX visit_id ON visits(vets_id);
+ CREATE INDEX visit_id ON visits(vets_id);
 
--- CREATE INDEX owners_mails ON owners(email);
+ CREATE INDEX owners_mails ON owners(email);
