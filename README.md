@@ -20,7 +20,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author**
+👤 **Stephanie Uchechi**
 
 - [Github](https://github.com/Ugboaja-Uchechi)
 
