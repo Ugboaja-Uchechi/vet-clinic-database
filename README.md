@@ -27,6 +27,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
 
 
+👤 **Orçun Uğur**
+
+- GitHub: [@githubhandle](https://github.com/luftedar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/orcunugur)
+
 
 ## 🤝 Contributing
 
