@@ -11,6 +11,10 @@ Use a relational database to create the data structure for a vet clinic. In this
 
 ## Getting Started
 
+Data Base Schema:
+
+![screenshot](./app_screenshot.png)
+
 This repository includes files with plain SQL that can be used to recreate a database:
 
 - Use [schema.sql](./schema.sql) to create all tables.
