@@ -43,3 +43,4 @@ CREATE TABLE invoices(
   played_at TIMESTAMP,
   medical_history_id INT
 );
+
